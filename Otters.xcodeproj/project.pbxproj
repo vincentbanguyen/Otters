@@ -15,7 +15,9 @@
 		E1E8F6F328CBF2B700D48EA8 /* GroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */; };
 		E1E8F6F528CBF6DE00D48EA8 /* GroupChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */; };
 		E1E8F6F728CBF7B400D48EA8 /* UserAzureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */; };
-		E1E8F6F928CC172C00D48EA8 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F828CC172C00D48EA8 /* SwiftUIView.swift */; };
+		E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */; };
+		E1E8F6FB28CC18F700D48EA8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FA28CC18F700D48EA8 /* Message.swift */; };
+		E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatView.swift; sourceTree = "<group>"; };
 		E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupChatViewModel.swift; sourceTree = "<group>"; };
 		E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAzureData.swift; sourceTree = "<group>"; };
-		E1E8F6F828CC172C00D48EA8 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleView.swift; sourceTree = "<group>"; };
+		E1E8F6FA28CC18F700D48EA8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +68,9 @@
 			children = (
 				E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */,
 				E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */,
-				E1E8F6F828CC172C00D48EA8 /* SwiftUIView.swift */,
+				E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */,
+				E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */,
+				E1E8F6FA28CC18F700D48EA8 /* Message.swift */,
 				E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */,
 				E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */,
 				E1E8F6E128CBE84200D48EA8 /* Assets.xcassets */,
@@ -161,10 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E8F6F528CBF6DE00D48EA8 /* GroupChatViewModel.swift in Sources */,
+				E1E8F6FB28CC18F700D48EA8 /* Message.swift in Sources */,
 				E1E8F6F728CBF7B400D48EA8 /* UserAzureData.swift in Sources */,
 				E1E8F6F328CBF2B700D48EA8 /* GroupChatView.swift in Sources */,
 				E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */,
-				E1E8F6F928CC172C00D48EA8 /* SwiftUIView.swift in Sources */,
+				E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */,
+				E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

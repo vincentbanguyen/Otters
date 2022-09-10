@@ -23,7 +23,7 @@ struct GroupChatView: View {
                     if message.isEmpty {
                         Text("Message...").opacity(0.5)
                     }
-                    TextField("", text: $message, onCommit: onCommit)
+                    TextField("", text: $message, axis: .vertical)
                         .frame(width: 300, height: 40)
                         .accentColor(.yellow)
                         .disableAutocorrection(true)
