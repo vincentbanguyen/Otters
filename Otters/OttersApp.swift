@@ -11,7 +11,7 @@ import SwiftUI
 struct OttersApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GroupChatView()
         }
     }
 }
