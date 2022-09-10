@@ -10,9 +10,8 @@ class GroupChatViewModel: ObservableObject {
     var threadId: String?
     var chatThreadClient: ChatThreadClient?
     var userDisplayName = ""
-    @Published private(set) var storedMessages: [Message] = []
+    @Published private(set) var storedMessages: [Message] = [Message(id: "", text: "Hello everyone!", fromUser: false, senderDisplayName: "GrapeOtter32")]
     @Published private(set) var lastMessageId: String = ""
-    
     /*
      ChatClient: This class is needed for the chat functionality. You instantiate it with your subscription information,
      and use it to create, get, delete threads, and subscribe to chat events.
@@ -169,7 +168,7 @@ class GroupChatViewModel: ObservableObject {
                 let message = Message(
                     id: event.id,
                     text: event.message,
-                    fromUser: event.senderDisplayName != userDisplayName,
+                    fromUser: event.senderDisplayName == userDisplayName,
                     senderDisplayName: event.senderDisplayName!)
                 DispatchQueue.main.async { [self] in
                     storedMessages.append(message)

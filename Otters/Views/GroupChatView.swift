@@ -3,50 +3,40 @@ import UIKit
 
 // NOTE: IF messages not popping off, make sure to generate new thread id and load new user tokens + identities
 struct GroupChatView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     @StateObject var groupChatVM = GroupChatViewModel()
-    @State var otterUser = 0
     @State var message = ""
     @FocusState private var textFieldIsFocused: Bool
     var body: some View {
+        
         VStack {
-            Text("Otters with Parkinson's")
-            Text(String(otterUser))
-            Text("Join Chat")
-                .onTapGesture {
-                    Task.init {
-                        await groupChatVM.createChatClient(otterUser: otterUser % 3)
-                        await groupChatVM.createChatThreadClient()
-                        await groupChatVM.activateChatListeners()
-                    }
-                }
-            Text("Change user")
-                .onTapGesture {
-                    otterUser += 1
-                }
-            
-            ScrollViewReader { proxy in
+            VStack {
+                Text("Otters with Parkinson's")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .frame(height: 80)
+                
+                
                 ScrollView {
+                    Text("")
                     ForEach(groupChatVM.storedMessages, id: \.id) { message in
                         MessageBubbleView(message: message)
                     }
                 }
-                .padding(.top, 10)
-                .background(.white)
-                .onChange(of: groupChatVM.lastMessageId) { id in
-                    // When the lastMessageId changes, scroll to the bottom of the conversation
-                    withAnimation {
-                        proxy.scrollTo(id, anchor: .bottom)
-                    }
-                }
+                .background(Color(hex: 0xfafafa))
+                .cornerRadius(30, corners: [.topLeft, .topRight])
             }
+            .background(Color(hex: 0x85c8e9))
+            
             HStack { // Message View
                 ZStack(alignment: .leading) {
                     if message.isEmpty {
                         Text("Message...").opacity(0.5)
+                            .font(.system(size: 20, weight: .medium, design: .rounded))
                     }
                     TextField("", text: $message, axis: .vertical)
-                        .frame(width: 300, height: 40)
-                        .accentColor(.yellow)
+                        .font(.system(size: 20, weight: .medium, design: .rounded))
+                        .frame(width: 280, height: 30)
+                        .accentColor(Color(hex: 0x85c8e9))
                         .disableAutocorrection(true)
                         .focused($textFieldIsFocused)
                 }
@@ -55,19 +45,25 @@ struct GroupChatView: View {
                     onCommit()
                 } label: {
                     Image(systemName: "paperplane.fill")
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(hex: 0xfafafa))
+                        .font(.system(size: 20, weight: .medium, design: .rounded))
                         .padding(10)
-                        .background(Color(.brown))
+                        .background(Color(hex: 0x1aa3e9))
                         .cornerRadius(50)
                 }
             }
             .padding(.horizontal)
-            .padding(.vertical, 10)
-            .background(Color(.gray))
-            .cornerRadius(50)
+            .padding(.vertical, 20)
+            .background(Color(hex: 0xdbdbdb))
+            .cornerRadius(30)
             .padding()
-            
-            
+        }
+        .onAppear {
+            Task.init {
+                await groupChatVM.createChatClient(otterUser: otterUser % 3)
+                await groupChatVM.createChatThreadClient()
+                await groupChatVM.activateChatListeners()
+            }
         }
     }
     

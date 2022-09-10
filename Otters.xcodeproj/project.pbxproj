@@ -18,6 +18,12 @@
 		E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */; };
 		E1E8F6FB28CC18F700D48EA8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FA28CC18F700D48EA8 /* Message.swift */; };
 		E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */; };
+		E1E8F6FF28CC33B600D48EA8 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FE28CC33B600D48EA8 /* ViewRouter.swift */; };
+		E1E8F70328CC340B00D48EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70228CC340B00D48EA8 /* ContentView.swift */; };
+		E1E8F70528CC351300D48EA8 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70428CC351300D48EA8 /* QRCodeView.swift */; };
+		E1E8F70A28CC355E00D48EA8 /* JoinGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */; };
+		E1E8F70C28CC433E00D48EA8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */; };
+		E1E8F70E28CC446D00D48EA8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70D28CC446D00D48EA8 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +38,12 @@
 		E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleView.swift; sourceTree = "<group>"; };
 		E1E8F6FA28CC18F700D48EA8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E1E8F6FE28CC33B600D48EA8 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		E1E8F70228CC340B00D48EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E1E8F70428CC351300D48EA8 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupChatView.swift; sourceTree = "<group>"; };
+		E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E1E8F70D28CC446D00D48EA8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +79,9 @@
 			isa = PBXGroup;
 			children = (
 				E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */,
-				E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */,
-				E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */,
-				E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */,
-				E1E8F6FA28CC18F700D48EA8 /* Message.swift */,
-				E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */,
-				E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */,
+				E1E8F70628CC351C00D48EA8 /* Views */,
+				E1E8F70728CC352A00D48EA8 /* ViewModels */,
+				E1E8F70828CC353800D48EA8 /* Models */,
 				E1E8F6E128CBE84200D48EA8 /* Assets.xcassets */,
 				E1E8F6E328CBE84200D48EA8 /* Otters.entitlements */,
 				E1E8F6E428CBE84200D48EA8 /* Preview Content */,
@@ -86,6 +95,39 @@
 				E1E8F6E528CBE84200D48EA8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E1E8F70628CC351C00D48EA8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E1E8F70228CC340B00D48EA8 /* ContentView.swift */,
+				E1E8F70428CC351300D48EA8 /* QRCodeView.swift */,
+				E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */,
+				E1E8F70D28CC446D00D48EA8 /* LoadingView.swift */,
+				E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */,
+				E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */,
+				E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E1E8F70728CC352A00D48EA8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E1E8F70828CC353800D48EA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */,
+				E1E8F6FA28CC18F700D48EA8 /* Message.swift */,
+				E1E8F6FE28CC33B600D48EA8 /* ViewRouter.swift */,
+				E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +210,17 @@
 			files = (
 				E1E8F6F528CBF6DE00D48EA8 /* GroupChatViewModel.swift in Sources */,
 				E1E8F6FB28CC18F700D48EA8 /* Message.swift in Sources */,
+				E1E8F70528CC351300D48EA8 /* QRCodeView.swift in Sources */,
 				E1E8F6F728CBF7B400D48EA8 /* UserAzureData.swift in Sources */,
 				E1E8F6F328CBF2B700D48EA8 /* GroupChatView.swift in Sources */,
 				E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */,
+				E1E8F70A28CC355E00D48EA8 /* JoinGroupChatView.swift in Sources */,
+				E1E8F70C28CC433E00D48EA8 /* WelcomeView.swift in Sources */,
+				E1E8F70328CC340B00D48EA8 /* ContentView.swift in Sources */,
 				E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */,
 				E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */,
+				E1E8F70E28CC446D00D48EA8 /* LoadingView.swift in Sources */,
+				E1E8F6FF28CC33B600D48EA8 /* ViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

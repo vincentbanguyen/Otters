@@ -1,4 +1,6 @@
 
+var otterUser = 0
+
 let StrawberryOtter22 = (
     displayName: "StrawberryOtter22",
     identity: "8:acs:5e706d6c-6ea3-4db5-b195-9a2cbadc58f2_00000013-c440-c3e2-08c8-3e3a0d00636a",

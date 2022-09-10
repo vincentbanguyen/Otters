@@ -16,17 +16,18 @@ struct MessageBubbleView: View {
         
         VStack(spacing: 5) {
             HStack {
-                if !message.fromUser {
+                if message.fromUser {
                     Spacer()
                 }
                 Text(message.senderDisplayName)
-                if message.fromUser {
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                if !message.fromUser {
                     Spacer()
                 }
             }
             .padding(.horizontal, 24)
             HStack {
-                if !message.fromUser {
+                if message.fromUser {
                     Spacer()
                 }
                 
@@ -36,26 +37,27 @@ struct MessageBubbleView: View {
                             .frame(width: 10, height: 20)
                             .cornerRadius(10)
                             .rotationEffect(Angle(degrees: 30))
-                            .rotation3DEffect(Angle(degrees: message.fromUser ? 180 : 0), axis: (x: 1, y: 0, z: 0))
-                            .foregroundColor(message.fromUser ? otherColor : userColor)
-                            .offset(x: CGFloat(message.fromUser ? message.text.count * 2 : -message.text.count * 2))
+                            .rotation3DEffect(Angle(degrees: message.fromUser ? 0 : 180), axis: (x: 1, y: 0, z: 0))
+                            .foregroundColor(message.fromUser ? userColor : otherColor)
+                            .offset(x: CGFloat(message.fromUser ? -message.text.count * 2 : message.text.count * 2))
                         
                         Text(message.text)
+                            .font(.system(size: 18, weight: .regular, design: .rounded))
                             .padding()
-                            .background(message.fromUser ? otherColor : userColor)
+                            .background(message.fromUser ? userColor : otherColor)
                             .cornerRadius(30)
                         Rectangle()
                             .frame(width: 10, height: 20)
                             .cornerRadius(10)
                             .rotationEffect(Angle(degrees: 30))
-                            .rotation3DEffect(Angle(degrees: message.fromUser ? 180 : 0), axis: (x: 1, y: 0, z: 0))
-                            .foregroundColor(message.fromUser ? otherColor : userColor)
-                            .offset(x: CGFloat(message.fromUser ? -message.text.count * 2 : message.text.count * 2))
+                            .rotation3DEffect(Angle(degrees: message.fromUser ? 0 : 180), axis: (x: 1, y: 0, z: 0))
+                            .foregroundColor(message.fromUser ? userColor : otherColor)
+                            .offset(x: CGFloat(message.fromUser ? message.text.count * 2 : -message.text.count * 2))
                     }
-                    .frame(maxWidth: 300, alignment: message.fromUser ? .leading : .trailing)
+                    .frame(maxWidth: 300, alignment: message.fromUser ? .trailing : .leading)
                     .padding(.horizontal)
                 }
-                if message.fromUser {
+                if !message.fromUser {
                     Spacer()
                 }
             }
