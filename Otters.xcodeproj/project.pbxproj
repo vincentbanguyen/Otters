@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E140F66128CD284800F47727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140F66028CD284800F47727 /* ContentView.swift */; };
 		E182A8DE28CC4B0E00311AA7 /* AzureCommunicationChat in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8DD28CC4B0E00311AA7 /* AzureCommunicationChat */; };
 		E182A8E128CC4B3200311AA7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8E028CC4B3200311AA7 /* CodeScanner */; };
 		E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */; };
@@ -19,7 +20,6 @@
 		E1E8F6FB28CC18F700D48EA8 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FA28CC18F700D48EA8 /* Message.swift */; };
 		E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */; };
 		E1E8F6FF28CC33B600D48EA8 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6FE28CC33B600D48EA8 /* ViewRouter.swift */; };
-		E1E8F70328CC340B00D48EA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70228CC340B00D48EA8 /* ContentView.swift */; };
 		E1E8F70528CC351300D48EA8 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70428CC351300D48EA8 /* QRCodeView.swift */; };
 		E1E8F70A28CC355E00D48EA8 /* JoinGroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */; };
 		E1E8F70C28CC433E00D48EA8 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */; };
@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E140F66028CD284800F47727 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1E8F6DA28CBE84000D48EA8 /* Otters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttersApp.swift; sourceTree = "<group>"; };
 		E1E8F6E128CBE84200D48EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -39,7 +40,6 @@
 		E1E8F6FA28CC18F700D48EA8 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		E1E8F6FC28CC1DA000D48EA8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E1E8F6FE28CC33B600D48EA8 /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		E1E8F70228CC340B00D48EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E1E8F70428CC351300D48EA8 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGroupChatView.swift; sourceTree = "<group>"; };
 		E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -100,12 +100,12 @@
 		E1E8F70628CC351C00D48EA8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E1E8F70228CC340B00D48EA8 /* ContentView.swift */,
+				E140F66028CD284800F47727 /* ContentView.swift */,
+				E1E8F70D28CC446D00D48EA8 /* LoadingView.swift */,
+				E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */,
 				E1E8F70428CC351300D48EA8 /* QRCodeView.swift */,
 				E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */,
-				E1E8F70D28CC446D00D48EA8 /* LoadingView.swift */,
 				E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */,
-				E1E8F70B28CC433E00D48EA8 /* WelcomeView.swift */,
 				E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */,
 			);
 			path = Views;
@@ -216,9 +216,9 @@
 				E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */,
 				E1E8F70A28CC355E00D48EA8 /* JoinGroupChatView.swift in Sources */,
 				E1E8F70C28CC433E00D48EA8 /* WelcomeView.swift in Sources */,
-				E1E8F70328CC340B00D48EA8 /* ContentView.swift in Sources */,
 				E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */,
 				E1E8F6FD28CC1DA000D48EA8 /* Extensions.swift in Sources */,
+				E140F66128CD284800F47727 /* ContentView.swift in Sources */,
 				E1E8F70E28CC446D00D48EA8 /* LoadingView.swift in Sources */,
 				E1E8F6FF28CC33B600D48EA8 /* ViewRouter.swift in Sources */,
 			);
@@ -349,6 +349,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Otters needs camera acces to scan QR codes";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -387,6 +388,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Otters needs camera acces to scan QR codes";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

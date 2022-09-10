@@ -9,7 +9,6 @@ struct GroupChatView: View {
     @FocusState private var textFieldIsFocused: Bool
     
     var body: some View {
-        
         VStack {
             VStack {
                 Text("Otters with Diabetes")
@@ -26,7 +25,7 @@ struct GroupChatView: View {
                 .background(Color(hex: 0xfafafa))
                 .cornerRadius(30, corners: [.topLeft, .topRight])
             }
-            .background(Color(hex: 0x85c8e9))
+            .background(backgroundBlue)
             
             HStack { // Message View
                 ZStack(alignment: .leading) {

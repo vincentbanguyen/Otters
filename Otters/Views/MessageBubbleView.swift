@@ -9,9 +9,6 @@ import SwiftUI
 
 struct MessageBubbleView: View {
     var message: Message
-    
-    let userColor = Color(hex: 0xad7a53, opacity: 1)
-    let otherColor = Color(hex: 0xddbda1, opacity: 1)
     var body: some View {
         
         VStack(spacing: 0) {

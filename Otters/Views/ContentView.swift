@@ -13,6 +13,15 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             switch viewRouter.currentScreen {
+            case Screen.loadingScreen:
+                LoadingView()
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                            withAnimation {
+                                viewRouter.currentScreen = .welcomeScreen
+                            }
+                        }
+                    }
             case Screen.welcomeScreen:
                 WelcomeView()
             case Screen.qrScreen:

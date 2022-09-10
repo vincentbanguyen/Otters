@@ -8,19 +8,48 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var viewRouter: ViewRouter
     var body: some View {
-        VStack {
-            Text("To ensure privacy, we give everyone an anonymous username.")
-                .font(.system(size: 20, weight: .medium, design: .rounded))
-            Text("Your's is:")
-                .font(.system(size: 20, weight: .medium, design: .rounded))
-            Text(StrawberryOtter22.displayName)
-                .font(.system(size: 20, weight: .medium, design: .rounded))
-            // Image Icon
-            Text("Welcome!")
-                .font(.system(size: 20, weight: .medium, design: .rounded))
+        ZStack {
+            backgroundBlue
+                .ignoresSafeArea()
+            VStack {
+                Text("To ensure patient privacy, we give everyone an anonymous username.")
+                    .padding(10)
+                    .font(.system(size: 20, weight: .medium, design: .rounded))
+                    .foregroundColor(.black)
+                Spacer()
+                Button {
+                    withAnimation {
+                        viewRouter.currentScreen = .qrScreen
+                    }
+                } label: {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 360, height: 70)
+                            .cornerRadius(25)
+                            .foregroundColor(primaryButtonColor)
+                        Text("Get Started")
+                            .font(.system(size: 32, weight: .medium, design: .rounded))
+                            .foregroundColor(.black)
+                    }
+                }
+            }
+            VStack {
+                VStack(alignment: .leading) {
+                    Text("Welcome,")
+                        .font(.system(size: 32, weight: .medium, design: .rounded))
+                        .foregroundColor(.black)
+                    Text("StrawberryOtter22!")
+                        .font(.system(size: 40, weight: .medium, design: .rounded))
+                        .foregroundColor(.black)
+                }
+                Image(StrawberryOtter22.imageName)
+                    .resizable()
+                    .frame(width: 200, height: 200)
+              
+            }
         }
-        .background(Color(hex: 0xdbdbdb))
     }
 }
 
