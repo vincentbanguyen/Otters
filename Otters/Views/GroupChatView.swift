@@ -7,11 +7,12 @@ struct GroupChatView: View {
     @StateObject var groupChatVM = GroupChatViewModel()
     @State var message = ""
     @FocusState private var textFieldIsFocused: Bool
+    
     var body: some View {
         
         VStack {
             VStack {
-                Text("Otters with Parkinson's")
+                Text("Otters with Diabetes")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
                     .frame(height: 80)
                 

@@ -1,5 +1,5 @@
-import AzureCommunicationCommon
 import AzureCommunicationChat
+import AzureCommunicationCommon
 
 import Foundation
 import SwiftUI
@@ -10,7 +10,7 @@ class GroupChatViewModel: ObservableObject {
     var threadId: String?
     var chatThreadClient: ChatThreadClient?
     var userDisplayName = ""
-    @Published private(set) var storedMessages: [Message] = [Message(id: "", text: "Hello everyone!", fromUser: false, senderDisplayName: "GrapeOtter32")]
+    @Published private(set) var storedMessages: [Message] = [Message(id: "", text: "Hello everyone!", fromUser: false, senderDisplayName: "GrapeOtter32", imageName: "GrapeOtter32")]
     @Published private(set) var lastMessageId: String = ""
     /*
      ChatClient: This class is needed for the chat functionality. You instantiate it with your subscription information,
@@ -25,8 +25,8 @@ class GroupChatViewModel: ObservableObject {
                 token = StrawberryOtter22.accessToken
                 userDisplayName = StrawberryOtter22.displayName
             case 1:
-                token = BlueBerryOtter78.accessToken
-                userDisplayName = BlueBerryOtter78.displayName
+                token = BlueberryOtter78.accessToken
+                userDisplayName = BlueberryOtter78.displayName
             case 2:
                 token = CherryOtter41.accessToken
                 userDisplayName = CherryOtter41.displayName
@@ -65,8 +65,8 @@ class GroupChatViewModel: ObservableObject {
                     displayName: StrawberryOtter22.displayName
                 ),
                 ChatParticipant(
-                    id: CommunicationUserIdentifier(BlueBerryOtter78.identity),
-                    displayName: BlueBerryOtter78.displayName
+                    id: CommunicationUserIdentifier(BlueberryOtter78.identity),
+                    displayName: BlueberryOtter78.displayName
                 ),
                 ChatParticipant(
                     id: CommunicationUserIdentifier(CherryOtter41.identity),
@@ -169,7 +169,9 @@ class GroupChatViewModel: ObservableObject {
                     id: event.id,
                     text: event.message,
                     fromUser: event.senderDisplayName == userDisplayName,
-                    senderDisplayName: event.senderDisplayName!)
+                    senderDisplayName: event.senderDisplayName!,
+                    imageName: event.senderDisplayName!
+                )
                 DispatchQueue.main.async { [self] in
                     storedMessages.append(message)
                     lastMessageId = event.id

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E182A8DE28CC4B0E00311AA7 /* AzureCommunicationChat in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8DD28CC4B0E00311AA7 /* AzureCommunicationChat */; };
+		E182A8E128CC4B3200311AA7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8E028CC4B3200311AA7 /* CodeScanner */; };
 		E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */; };
 		E1E8F6E228CBE84200D48EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E8F6E128CBE84200D48EA8 /* Assets.xcassets */; };
 		E1E8F6E628CBE84200D48EA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E8F6E528CBE84200D48EA8 /* Preview Assets.xcassets */; };
-		E1E8F6EE28CBF28400D48EA8 /* AzureCommunicationChat in Frameworks */ = {isa = PBXBuildFile; productRef = E1E8F6ED28CBF28400D48EA8 /* AzureCommunicationChat */; };
-		E1E8F6F128CBF29F00D48EA8 /* AzureCommunicationCommon in Frameworks */ = {isa = PBXBuildFile; productRef = E1E8F6F028CBF29F00D48EA8 /* AzureCommunicationCommon */; };
 		E1E8F6F328CBF2B700D48EA8 /* GroupChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */; };
 		E1E8F6F528CBF6DE00D48EA8 /* GroupChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F428CBF6DE00D48EA8 /* GroupChatViewModel.swift */; };
 		E1E8F6F728CBF7B400D48EA8 /* UserAzureData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6F628CBF7B400D48EA8 /* UserAzureData.swift */; };
@@ -51,8 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E8F6F128CBF29F00D48EA8 /* AzureCommunicationCommon in Frameworks */,
-				E1E8F6EE28CBF28400D48EA8 /* AzureCommunicationChat in Frameworks */,
+				E182A8E128CC4B3200311AA7 /* CodeScanner in Frameworks */,
+				E182A8DE28CC4B0E00311AA7 /* AzureCommunicationChat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +147,8 @@
 			);
 			name = Otters;
 			packageProductDependencies = (
-				E1E8F6ED28CBF28400D48EA8 /* AzureCommunicationChat */,
-				E1E8F6F028CBF29F00D48EA8 /* AzureCommunicationCommon */,
+				E182A8DD28CC4B0E00311AA7 /* AzureCommunicationChat */,
+				E182A8E028CC4B3200311AA7 /* CodeScanner */,
 			);
 			productName = Otters;
 			productReference = E1E8F6DA28CBE84000D48EA8 /* Otters.app */;
@@ -179,8 +179,8 @@
 			);
 			mainGroup = E1E8F6D128CBE84000D48EA8;
 			packageReferences = (
-				E1E8F6EC28CBF28400D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */,
-				E1E8F6EF28CBF29F00D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationCommon" */,
+				E182A8DC28CC4B0D00311AA7 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */,
+				E182A8DF28CC4B3200311AA7 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = E1E8F6DB28CBE84000D48EA8 /* Products */;
 			projectDirPath = "";
@@ -436,7 +436,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E1E8F6EC28CBF28400D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */ = {
+		E182A8DC28CC4B0D00311AA7 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Azure/SwiftPM-AzureCommunicationChat.git";
 			requirement = {
@@ -444,26 +444,26 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		E1E8F6EF28CBF29F00D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationCommon" */ = {
+		E182A8DF28CC4B3200311AA7 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Azure/SwiftPM-AzureCommunicationCommon.git";
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
 			requirement = {
-				branch = master;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E1E8F6ED28CBF28400D48EA8 /* AzureCommunicationChat */ = {
+		E182A8DD28CC4B0E00311AA7 /* AzureCommunicationChat */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E1E8F6EC28CBF28400D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */;
+			package = E182A8DC28CC4B0D00311AA7 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationChat" */;
 			productName = AzureCommunicationChat;
 		};
-		E1E8F6F028CBF29F00D48EA8 /* AzureCommunicationCommon */ = {
+		E182A8E028CC4B3200311AA7 /* CodeScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E1E8F6EF28CBF29F00D48EA8 /* XCRemoteSwiftPackageReference "SwiftPM-AzureCommunicationCommon" */;
-			productName = AzureCommunicationCommon;
+			package = E182A8DF28CC4B3200311AA7 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

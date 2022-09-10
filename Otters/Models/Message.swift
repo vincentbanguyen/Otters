@@ -12,4 +12,5 @@ struct Message: Identifiable, Codable {
     var text: String
     var fromUser: Bool
     var senderDisplayName: String
+    var imageName: String
 }
