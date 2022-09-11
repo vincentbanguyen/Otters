@@ -11,10 +11,21 @@ struct GroupChatView: View {
     var body: some View {
         VStack {
             VStack {
-                Text("Otters with Diabetes")
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                    .frame(height: 80)
-                
+                ZStack {
+                    Text("Otters with Diabetes")
+                        .font(.system(size: 30, weight: .bold, design: .rounded))
+                        .frame(height: 80)
+                    HStack {
+                        Spacer()
+                        Button {
+                            viewRouter.currentScreen = .infoScreen
+                        } label: {
+                            Image(systemName: "heart.text.square")
+                                .font(.system(size: 30))
+                        }
+                    }
+                    .padding(.trailing, 20)
+                }
                 
                 ScrollView {
                     Text("")

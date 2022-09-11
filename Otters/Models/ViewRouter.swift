@@ -17,4 +17,5 @@ enum Screen {
     case qrScreen
     case joinGroupChatScreen
     case groupChatScreen
+    case infoScreen
 }

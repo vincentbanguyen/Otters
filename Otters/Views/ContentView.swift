@@ -30,6 +30,8 @@ struct ContentView: View {
                 JoinGroupChatView()
             case Screen.groupChatScreen:
                 GroupChatView()
+            case Screen.infoScreen:
+                InfoView()
             }
         }
         .environmentObject(viewRouter)

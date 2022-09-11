@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E140F66128CD284800F47727 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140F66028CD284800F47727 /* ContentView.swift */; };
+		E140F66328CD2F0700F47727 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E140F66228CD2F0700F47727 /* InfoView.swift */; };
 		E182A8DE28CC4B0E00311AA7 /* AzureCommunicationChat in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8DD28CC4B0E00311AA7 /* AzureCommunicationChat */; };
 		E182A8E128CC4B3200311AA7 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E182A8E028CC4B3200311AA7 /* CodeScanner */; };
 		E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		E140F66028CD284800F47727 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E140F66228CD2F0700F47727 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		E1E8F6DA28CBE84000D48EA8 /* Otters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E8F6DD28CBE84000D48EA8 /* OttersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OttersApp.swift; sourceTree = "<group>"; };
 		E1E8F6E128CBE84200D48EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				E1E8F70428CC351300D48EA8 /* QRCodeView.swift */,
 				E1E8F70928CC355E00D48EA8 /* JoinGroupChatView.swift */,
 				E1E8F6F228CBF2B700D48EA8 /* GroupChatView.swift */,
+				E140F66228CD2F0700F47727 /* InfoView.swift */,
 				E1E8F6F828CC172C00D48EA8 /* MessageBubbleView.swift */,
 			);
 			path = Views;
@@ -214,6 +217,7 @@
 				E1E8F6F728CBF7B400D48EA8 /* UserAzureData.swift in Sources */,
 				E1E8F6F328CBF2B700D48EA8 /* GroupChatView.swift in Sources */,
 				E1E8F6DE28CBE84000D48EA8 /* OttersApp.swift in Sources */,
+				E140F66328CD2F0700F47727 /* InfoView.swift in Sources */,
 				E1E8F70A28CC355E00D48EA8 /* JoinGroupChatView.swift in Sources */,
 				E1E8F70C28CC433E00D48EA8 /* WelcomeView.swift in Sources */,
 				E1E8F6F928CC172C00D48EA8 /* MessageBubbleView.swift in Sources */,

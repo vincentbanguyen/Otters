@@ -9,19 +9,14 @@ import SwiftUI
 
 struct JoinGroupChatView: View {
     @EnvironmentObject var viewRouter: ViewRouter
+    let groupIconSize = 80.0
     var body: some View {
         ZStack {
             backgroundBlue
                 .ignoresSafeArea()
+            
             VStack {
-                Text("Otters with Parkinson's")
-                Text("722 members")
-                    .onTapGesture {
-                        otterUser += 1
-                    }
-                
-                Text("Join to get support from your otter peers about Parkinson's Disease")
-                
+                Spacer()
                 Button {
                     withAnimation {
                         viewRouter.currentScreen = .groupChatScreen
@@ -29,14 +24,47 @@ struct JoinGroupChatView: View {
                 } label: {
                     ZStack {
                         Rectangle()
-                            .frame(width: 300, height: 50)
+                            .frame(width: 360, height: 70)
                             .cornerRadius(25)
-                            .foregroundColor(.green)
-                        Text("Join")
+                            .foregroundColor(primaryButtonColor)
+                        Text("Join Support Group")
+                            .font(.system(size: 32, weight: .medium, design: .rounded))
                             .foregroundColor(.black)
                     }
                 }
             }
+
+            VStack {
+                Text("Otters with Diabetes")
+                    .font(.system(size: 40, weight: .medium, design: .rounded))
+                
+                HStack(spacing: -20) {
+                    Image(StrawberryOtter22.imageName)
+                        .resizable()
+                        .frame(width: groupIconSize, height: groupIconSize)
+                    Image(BlueberryOtter78.imageName)
+                        .resizable()
+                        .frame(width: groupIconSize, height: groupIconSize)
+                    Image(CherryOtter41.imageName)
+                        .resizable()
+                        .frame(width: groupIconSize, height: groupIconSize)
+                    Image("GrapeOtter32")
+                        .resizable()
+                        .frame(width: groupIconSize, height: groupIconSize)
+                }
+                Text("722 members")
+                    .frame(alignment: .center)
+                    .padding(.bottom, 10)
+                    .font(.system(size: 32, weight: .medium, design: .rounded))
+                    .onTapGesture {
+                        otterUser += 1
+                    }
+
+                Text("Join to get support from your otter peers about diabetes")
+                    .font(.system(size: 18, weight: .medium, design: .rounded))
+                    .frame(alignment: .center)
+            }
+            
         }
         .transition(.backslide)
     }
