@@ -41,7 +41,7 @@ struct MessageBubbleView: View {
                             .rotationEffect(Angle(degrees: 30))
                             .rotation3DEffect(Angle(degrees: message.fromUser ? 0 : 180), axis: (x: 1, y: 0, z: 0))
                             .foregroundColor(message.fromUser ? userColor : otherColor)
-                            .offset(x: CGFloat(message.fromUser ? -message.text.count * 2 : message.text.count * 2))
+                            .offset(x: CGFloat(message.fromUser ? -message.text.count : message.text.count))
                         
                         Text(message.text)
                             .font(.system(size: 18, weight: .regular, design: .rounded))
@@ -55,7 +55,7 @@ struct MessageBubbleView: View {
                             .rotationEffect(Angle(degrees: 30))
                             .rotation3DEffect(Angle(degrees: message.fromUser ? 0 : 180), axis: (x: 1, y: 0, z: 0))
                             .foregroundColor(message.fromUser ? userColor : otherColor)
-                            .offset(x: CGFloat(message.fromUser ? message.text.count * 2 : -message.text.count * 2))
+                            .offset(x: CGFloat(message.fromUser ? message.text.count : -message.text.count))
                     }
                     .frame(maxWidth: 300, alignment: message.fromUser ? .trailing : .leading)
                 }
