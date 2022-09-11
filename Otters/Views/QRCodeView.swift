@@ -32,7 +32,7 @@ struct QRCodeView: View {
                     .foregroundColor(didScan ? .green : .gray)
                 Text("Scan the QR Code provided by your doctor")
                     .font(.system(size: 18, weight: .bold, design: .rounded))
-                    .foregroundColor(.white)
+                    .foregroundColor(.gray)
                     .onTapGesture {
                         withAnimation {
                             viewRouter.currentScreen = .joinGroupChatScreen

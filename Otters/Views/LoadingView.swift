@@ -12,7 +12,14 @@ struct LoadingView: View {
         ZStack {
             backgroundBlue
                 .ignoresSafeArea()
-            Text("HEllo")
+            VStack(spacing: 40) {
+                Image("LoadingIcon")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                Text("Loading...")
+                    .font(.system(size: 32, weight: .medium, design: .rounded))
+                    .foregroundColor(.black)
+            }
         }
     }
 }

@@ -16,7 +16,7 @@ struct ContentView: View {
             case Screen.loadingScreen:
                 LoadingView()
                     .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                             withAnimation {
                                 viewRouter.currentScreen = .welcomeScreen
                             }

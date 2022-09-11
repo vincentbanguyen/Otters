@@ -17,6 +17,7 @@ struct MessageBubbleView: View {
                     Spacer()
                 }
                 Text(message.senderDisplayName)
+                    .foregroundColor(.black)
                     .font(.system(size: 16, weight: .medium, design: .rounded))
                 if !message.fromUser {
                     Spacer()
@@ -47,6 +48,7 @@ struct MessageBubbleView: View {
                             .padding()
                             .background(message.fromUser ? userColor : otherColor)
                             .cornerRadius(30)
+                            .foregroundColor(.black)
                         Rectangle()
                             .frame(width: 10, height: 20)
                             .cornerRadius(10)
@@ -73,8 +75,8 @@ struct MessageBubbleView: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            MessageBubbleView(message: Message(id: "0", text: "How are you doing?", fromUser: true, senderDisplayName: StrawberryOtter22.displayName, imageName: StrawberryOtter22.imageName))
-            MessageBubbleView(message: Message(id: "1", text: "I'm doing ehhh", fromUser: false, senderDisplayName: BlueberryOtter78.displayName, imageName: BlueberryOtter78.imageName))
+            MessageBubbleView(message: Message(text: "How are you doing?", fromUser: true, senderDisplayName: StrawberryOtter22.displayName, imageName: StrawberryOtter22.imageName))
+            MessageBubbleView(message: Message(text: "I'm doing ehhh", fromUser: false, senderDisplayName: BlueberryOtter78.displayName, imageName: BlueberryOtter78.imageName))
         }
     }
 }

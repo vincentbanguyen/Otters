@@ -7,10 +7,9 @@ import SwiftUI
 class GroupChatViewModel: ObservableObject {
     let semaphore = DispatchSemaphore(value: 0)
     var chatClient: ChatClient?
-    var threadId: String?
     var chatThreadClient: ChatThreadClient?
     var userDisplayName = ""
-    @Published private(set) var storedMessages: [Message] = [Message(id: "", text: "Hello everyone!", fromUser: false, senderDisplayName: "GrapeOtter32", imageName: "GrapeOtter32")]
+    @Published var storedMessages: [Message] = [Message(text: "Hello everyone!", fromUser: false, senderDisplayName: "GrapeOtter32", imageName: "GrapeOtter32")]
     @Published private(set) var lastMessageId: String = ""
     /*
      ChatClient: This class is needed for the chat functionality. You instantiate it with your subscription information,
@@ -79,8 +78,8 @@ class GroupChatViewModel: ObservableObject {
         chatClient.create(thread: request) { [self] result, _ in
             switch result {
             case let .success(result):
-                self.threadId = result.chatThread?.id
-                print("PROGRESS: Chat Thread successfully created with threadID: \(self.threadId!)")
+                // self.threadId = result.chatThread?.id
+                 print("PROGRESS: Chat Thread successfully created with threadID: \(result.chatThread?.id)")
                 
             case .failure:
                 fatalError("Failed to create thread.")
@@ -115,9 +114,8 @@ class GroupChatViewModel: ObservableObject {
     
     func createChatThreadClient() async {
         do {
-            threadId = "19:8w_yC1xsQ59f7aJKmfIxuuvvxSc4RNKz0N5v2APSorU1@thread.v2"
             guard let chatClient = self.chatClient else { return }
-            self.chatThreadClient = try chatClient.createClient(forThread: threadId!)
+            self.chatThreadClient = try chatClient.createClient(forThread: threadId)
             print("PROGRESS: creating chat thread client success")
         } catch {
             print("creating chat thread client failed: \(error.localizedDescription)")
@@ -166,14 +164,15 @@ class GroupChatViewModel: ObservableObject {
                 print("PROGRESS: Received a message: \(event.message)")
                 print("PROGRESS: from: \(event.senderDisplayName!)")
                 let message = Message(
-                    id: event.id,
                     text: event.message,
                     fromUser: event.senderDisplayName == userDisplayName,
                     senderDisplayName: event.senderDisplayName!,
                     imageName: event.senderDisplayName!
                 )
                 DispatchQueue.main.async { [self] in
-                    storedMessages.append(message)
+                    if event.senderDisplayName != userDisplayName {
+                        storedMessages.append(message)
+                    }
                     lastMessageId = event.id
                 }
             default:

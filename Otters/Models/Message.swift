@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Message: Identifiable, Codable {
-    var id: String
+struct Message: Identifiable {
+    let id = UUID()
     var text: String
     var fromUser: Bool
     var senderDisplayName: String
